@@ -60,9 +60,7 @@ export class PreviewView extends ItemView implements PreviewViewState {
   }
 
   addActions() {
-    const basePath = (
-      this.app.vault.adapter as FileSystemAdapter
-    ).getBasePath();
+    const basePath = "D:\\Downloads"; 
     const themeDir = join(basePath, this.settings.themeDir);
     this.addAction('download', 'Export as PDF', () => {
       if (this.file) {
