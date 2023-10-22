@@ -35,9 +35,7 @@ export async function convertToBase64(path: string): Promise<string | null> {
   const mime = mimes.getType(path);
   if (!mime) return null;
   if (await app.vault.adapter.exists(path)) {
-    const basePath = (
-      this.app.vault.adapter as FileSystemAdapter
-    ).getBasePath();
+    const basePath = "D:\\Downloads"; 
     return readFileAsBase64(normalize(join(basePath, path)));
   }
 
