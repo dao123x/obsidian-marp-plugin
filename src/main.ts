@@ -40,9 +40,7 @@ export default class MarpPlugin extends Plugin {
 
     // load marp themes
     {
-      const basePath = (
-        this.app.vault.adapter as FileSystemAdapter
-      ).getBasePath();
+      const basePath = "D:\\Downloads"; 
       const { themeDir } = this.settings;
       const isCss = (filename: string) => filename.split('.').at(-1) === 'css';
 
